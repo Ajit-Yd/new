@@ -25,6 +25,12 @@ export default async function SiteHeader() {
             {brand}
           </span>
         </Link>
+        <Link
+          href="/dashboard"
+          className="rounded-lg border border-border px-3 py-1.5 text-sm font-semibold text-muted transition-colors hover:border-primary hover:text-primary-dark"
+        >
+          Dashboard
+        </Link>
       </div>
     </header>
   );
