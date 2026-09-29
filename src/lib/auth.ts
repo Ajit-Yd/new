@@ -21,11 +21,11 @@ export function slugifyName(name: string): string {
     .replace(/^-|-$/g, "");
 }
 
-export function createSlug(name: string): string {
+export async function createSlug(name: string): Promise<string> {
   const base = slugifyName(name) || "owner";
   let slug = base;
   let i = 1;
-  while (isSlugTaken(slug)) {
+  while (await isSlugTaken(slug)) {
     slug = `${base}-${i}`;
     i += 1;
   }
@@ -93,17 +93,17 @@ export async function createOwner(data: {
   if (String(data.password || "").length < 4) {
     return { error: "Password must be at least 4 characters." };
   }
-  if (isEmailTaken(email)) {
+  if (await isEmailTaken(email)) {
     return { error: "An account with this email already exists. Please login." };
   }
   let slug = (data.slug || "").trim();
   if (slug && !/^[a-z0-9][a-z0-9-]{1,49}$/i.test(slug)) {
     return { error: "Link name can contain only letters, numbers and dashes." };
   }
-  if (slug && isSlugTaken(slug)) {
+  if (slug && (await isSlugTaken(slug))) {
     return { error: "That link name is already taken. Try another." };
   }
-  if (!slug) slug = createSlug(data.name);
+  if (!slug) slug = await createSlug(data.name);
 
   const owner: Owner = {
     id: generateId("own"),
@@ -116,7 +116,7 @@ export async function createOwner(data: {
     createdAt: new Date().toISOString(),
     updatedAt: new Date().toISOString(),
   };
-  saveOwner(owner);
+  await saveOwner(owner);
   return { owner };
 }
 
@@ -124,7 +124,7 @@ export async function updateOwnerProfile(
   ownerId: string,
   data: Partial<Pick<Owner, "name" | "email" | "phone" | "whatsapp" | "website" | "tagline" | "about" | "city" | "address" | "logo" | "slug" | "brandName" | "brandColor" | "carousel">>
 ): Promise<{ owner?: Owner; error?: string }> {
-  const existing = getOwnerById(ownerId);
+  const existing = await getOwnerById(ownerId);
   if (!existing) return { error: "Not found." };
   if (data.name && !data.name.trim()) return { error: "Name cannot be empty." };
 
@@ -134,7 +134,7 @@ export async function updateOwnerProfile(
     if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
       return { error: "Enter a valid email address." };
     }
-    if (isEmailTaken(email, ownerId)) {
+    if (await isEmailTaken(email, ownerId)) {
       return { error: "That email is already used by another account." };
     }
     existing.email = email;
@@ -146,7 +146,7 @@ export async function updateOwnerProfile(
     if (!/^[a-z0-9][a-z0-9-]{1,49}$/i.test(slug)) {
       return { error: "Link name can contain only letters, numbers and dashes." };
     }
-    if (isSlugTaken(slug, ownerId)) {
+    if (await isSlugTaken(slug, ownerId)) {
       return { error: "That link name is already taken. Try another." };
     }
   }
@@ -173,7 +173,7 @@ export async function updateOwnerProfile(
       .slice(0, MAX_IMAGES);
   }
   existing.updatedAt = new Date().toISOString();
-  saveOwner(existing);
+  await saveOwner(existing);
   return { owner: existing };
 }
 

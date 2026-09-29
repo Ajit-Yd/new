@@ -57,12 +57,11 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    const buffer = Buffer.from(await file.arrayBuffer());
-    if (buffer.byteLength === 0) {
+    const bytes = new Uint8Array(await file.arrayBuffer());
+    if (bytes.byteLength === 0) {
       return NextResponse.json({ error: "File is empty." }, { status: 400 });
     }
 
-    const bytes = new Uint8Array(buffer);
     let ext: string | null;
     if (kind === "image") {
       ext = getImageExtension(bytes);
@@ -84,13 +83,13 @@ export async function POST(request: NextRequest) {
     }
 
     const filename = randomFilename(ext);
-    saveUpload(filename, buffer);
+    await saveUpload(filename, bytes);
 
     return NextResponse.json(
       {
         url: `/api/uploads/${filename}`,
         kind,
-        bytes: buffer.byteLength,
+        bytes: bytes.byteLength,
       },
       { status: 200 }
     );

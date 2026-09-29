@@ -27,7 +27,7 @@ export async function GET(_request: NextRequest, { params }: { params: RoutePara
     return new NextResponse("Not found", { status: 404 });
   }
 
-  const buf = loadUpload(safe);
+  const buf = await loadUpload(safe);
   if (!buf) return new NextResponse("Not found", { status: 404 });
 
   return new NextResponse(new Uint8Array(buf), {
@@ -50,6 +50,6 @@ export async function DELETE(request: NextRequest, { params }: { params: RoutePa
   if (!isAllowedImageExt(ext) && !isAllowedVideoExt(ext)) {
     return NextResponse.json({ error: "Not found." }, { status: 404 });
   }
-  removeUpload(safe);
+  await removeUpload(safe);
   return NextResponse.json({ ok: true }, { status: 200 });
 }

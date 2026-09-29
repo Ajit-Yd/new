@@ -3,7 +3,7 @@ import { getOwnerBySlug } from "@/lib/store";
 
 export async function GET(_req: Request, { params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
-  const owner = getOwnerBySlug(slug);
+  const owner = await getOwnerBySlug(slug);
   if (!owner) return NextResponse.json({ error: "Not found." }, { status: 404 });
   return NextResponse.json({
     name: owner.name,

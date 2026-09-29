@@ -24,7 +24,7 @@ export async function PUT(request: NextRequest, { params }: { params: RouteParam
   const removed = [...existing.images, ...existing.videos].filter(
     (u) => !(cleaned.images || []).includes(u) && !(cleaned.videos || []).includes(u)
   );
-  removeUploadFiles(removed);
+  await removeUploadFiles(removed);
 
   const branch = {
     ...existing,
@@ -47,7 +47,7 @@ export async function PUT(request: NextRequest, { params }: { params: RouteParam
     updatedAt: new Date().toISOString(),
   };
 
-  const saved = saveBranch(owner.id, branch);
+  const saved = await saveBranch(owner.id, branch);
   if (!saved) return NextResponse.json({ error: "Owner not found." }, { status: 404 });
   return NextResponse.json({ branch: saved }, { status: 200 });
 }
@@ -57,7 +57,7 @@ export async function DELETE(_request: NextRequest, { params }: { params: RouteP
   if (!owner) return NextResponse.json({ error: "Unauthorized." }, { status: 401 });
 
   const { id } = await params;
-  const ok = deleteBranch(owner.id, id);
+  const ok = await deleteBranch(owner.id, id);
   if (!ok) return NextResponse.json({ error: "Branch not found." }, { status: 404 });
   return NextResponse.json({ ok: true }, { status: 200 });
 }

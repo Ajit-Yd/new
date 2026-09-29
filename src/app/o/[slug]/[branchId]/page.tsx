@@ -38,9 +38,11 @@ function genderLabel(gender: string): string {
   return "Co-ed PG";
 }
 
+export const dynamic = "force-dynamic";
+
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const { slug, branchId } = await params;
-  const owner = getOwnerBySlug(slug);
+  const owner = await getOwnerBySlug(slug);
   const branch = owner?.branches.find((b) => b.id === branchId);
   if (!owner || !branch) return { title: "PG not found" };
   return {
@@ -53,7 +55,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 
 export default async function BranchDetailPage({ params }: PageProps) {
   const { slug, branchId } = await params;
-  const owner = getOwnerBySlug(slug);
+  const owner = await getOwnerBySlug(slug);
   if (!owner) notFound();
   const branch = owner.branches.find((b) => b.id === branchId);
   if (!branch) notFound();

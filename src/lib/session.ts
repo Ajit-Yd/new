@@ -8,7 +8,7 @@ export async function currentOwner(): Promise<Owner | null> {
   const token = store.get(SESSION_COOKIE)?.value;
   const ownerId = getSessionOwnerId(token);
   if (!ownerId) return null;
-  return getOwnerById(ownerId) || null;
+  return (await getOwnerById(ownerId)) || null;
 }
 
 export async function authenticated(): Promise<boolean> {

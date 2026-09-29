@@ -46,7 +46,7 @@ export async function POST(request: NextRequest) {
     updatedAt: now,
   };
 
-  const saved = saveBranch(owner.id, branch);
+  const saved = await saveBranch(owner.id, branch);
   if (!saved) return NextResponse.json({ error: "Owner not found." }, { status: 404 });
   return NextResponse.json({ branch: saved }, { status: 201 });
 }

@@ -6,7 +6,7 @@ export default async function SiteHeader() {
   const h = await headers();
   const pathname = h.get("x-pg-pathname") || "";
   const match = pathname.match(/^\/o\/([^/]+)/);
-  const owner = (match ? getOwnerBySlug(match[1]) : undefined) || getOwners()[0];
+  const owner = (match ? await getOwnerBySlug(match[1]) : undefined) || (await getOwners())[0];
   const brand = (owner?.brandName?.trim() || "Ex-Army").trim();
   const raw = (owner?.brandColor || "").trim().toLowerCase();
   const color = /^#[0-9a-f]{6}$/.test(raw) ? raw : "#d97706";

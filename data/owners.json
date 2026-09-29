@@ -1,46 +1,321 @@
 [
   {
     "id": "own-demo-1",
-    "name": "Ex-Army Boys Hostel",
-    "email": "demo@sunrisepg.com",
-    "passwordHash": "abb49a1d23d2997960e94ec8f295fd2e:651540bded295bea02dff73506c8dd99c9fa2e4d0aa096212b7bc38859475e1fafe5f811cb2e0ebeaba040177ed28a5096346ac0bdb38aec31b3931d4b144502",
-    "slug": "ex-army-boys-hostel",
-    "phone": "+918725959828",
-    "whatsapp": "+918725959828",
-    "website": "https://intervals-donna-rating-brass.trycloudflare.com/",
-    "tagline": "Boys PG on Piprali Road, Sikar with Best Study Environment",
-    "about": "Ex-Army Boys Hostel is a boys' paying guest accommodation in Piprali Road, Sikar. We offer Triple, Double and Single sharing AC & non-AC rooms with home-style 3 meals daily, WiFi, laundry, hot water and power backup.",
-    "city": "Sikar",
-    "address": "Near Milan Marriage Garden, Pooja Water Supplier Wali Gali, Piprali Road, Sikar - 332001",
-    "brandName": "Ex-Army",
+    "name": "Sunrise Boys Hostel",
+    "email": "demo@pgowner.test",
+    "passwordHash": "200110931b173b4e4789c3a254cd3dff:32eeb49b661a8d69a17a294d54fd7eb3fa0f5bbc1356ccde88e7a263954379daa1399b7a47f7d49617935bc2a98cd6bc49107aa214a405c5f9a0b2465762f52e",
+    "slug": "sunrise-boys-hostel",
+    "phone": "+919000000001",
+    "whatsapp": "+919000000001",
+    "website": "https://example.com/sunrise",
+    "tagline": "Boys PG in Jaipur with home-style meals and a study-first culture",
+    "about": "Sunrise Boys Hostel is a demo listing. Triple, double and single sharing rooms near Vaishali Nagar with 3 meals a day, high-speed WiFi, laundry and 24x7 power backup.",
+    "city": "Jaipur",
+    "address": "12, Vaishali Nagar Extension, Jaipur, Rajasthan 302021",
+    "brandName": "Sunrise",
     "brandColor": "#d97706",
+    "logo": "/api/uploads/demo-own-demo-1-logo.png",
     "carousel": [
-      "/api/uploads/ex-army-1.jpg",
-      "/api/uploads/demo-1.jpeg",
-      "/api/uploads/demo-2.jpeg",
-      "/api/uploads/demo-3.jpeg",
-      "/api/uploads/demo-4.jpeg",
-      "/api/uploads/demo-5.jpeg",
-      "/api/uploads/demo-6.jpeg",
-      "/api/uploads/demo-7.jpeg",
-      "/api/uploads/demo-8.jpeg",
-      "/api/uploads/demo-9.jpeg",
-      "/api/uploads/demo-10.jpeg",
-      "/api/uploads/demo-11.jpeg"
+      "/api/uploads/demo-own-demo-1-0.png",
+      "/api/uploads/demo-own-demo-1-1.png",
+      "/api/uploads/demo-own-demo-1-2.png",
+      "/api/uploads/demo-own-demo-1-3.png",
+      "/api/uploads/demo-own-demo-1-4.png",
+      "/api/uploads/demo-own-demo-1-5.png"
     ],
     "branches": [
       {
         "id": "br-demo-1",
-        "name": "Ex-Army Boys Hostel",
+        "name": "Sunrise Boys Hostel — Vaishali Nagar",
         "gender": "male",
-        "city": "Sikar",
-        "locality": "Piprali Road",
-        "address": "Near Milan Marriage Garden, Pooja Water Supplier Wali Gali, Piprali Road, Sikar - 332001",
-        "description": "Ex-Army Boys Hostel paying guest accommodation in Piprali Road, Sikar. Triple, double and single sharing AC & non-AC rooms with 3 meals a day.",
+        "city": "Jaipur",
+        "locality": "Vaishali Nagar",
+        "address": "12, Vaishali Nagar Extension, Jaipur, Rajasthan 302021",
+        "description": "Demo branch. Quiet residential lane, 10 minutes from MMI hospital. Rooms with study table, wardrobe and attached bath.",
         "amenities": [
           "WiFi",
           "Food (3 meals)",
-          "AC Rooms",
+          "Laundry",
+          "Hot Water",
+          "Power Backup",
+          "CCTV",
+          "Housekeeping",
+          "Study Table"
+        ],
+        "highlights": [
+          "Boys only",
+          "Study table in every room",
+          "3 home-style meals",
+          "Power backup 24/7",
+          "CCTV monitored"
+        ],
+        "pricing": [
+          {
+            "type": "Triple Sharing",
+            "price": 6500,
+            "meals": "3 meals"
+          },
+          {
+            "type": "Double Sharing",
+            "price": 7500,
+            "meals": "3 meals"
+          },
+          {
+            "type": "AC Double Sharing",
+            "price": 9500,
+            "meals": "3 meals"
+          },
+          {
+            "type": "AC Single",
+            "price": 11500,
+            "meals": "3 meals"
+          }
+        ],
+        "lat": 26.9124,
+        "lng": 75.7873,
+        "phone": "+919000000001",
+        "whatsapp": "+919000000001",
+        "images": [
+          "/api/uploads/demo-own-demo-1-0.png",
+          "/api/uploads/demo-own-demo-1-1.png",
+          "/api/uploads/demo-own-demo-1-2.png",
+          "/api/uploads/demo-own-demo-1-3.png"
+        ],
+        "videos": [],
+        "mapsUrl": "",
+        "createdAt": "2026-09-29T10:00:00.000Z",
+        "updatedAt": "2026-09-29T10:00:00.000Z"
+      },
+      {
+        "id": "br-demo-2",
+        "name": "Sunrise Boys Hostel — Malviya Nagar",
+        "gender": "male",
+        "city": "Jaipur",
+        "locality": "Malviya Nagar",
+        "address": "45, Gopalbari Circle, Malviya Nagar, Jaipur, Rajasthan 302017",
+        "description": "Demo branch. Spacious rooms for working professionals and students, with covered parking and a rooftop study deck.",
+        "amenities": [
+          "WiFi",
+          "Food (2 meals)",
+          "Parking",
+          "Laundry",
+          "Power Backup",
+          "Gym",
+          "CCTV"
+        ],
+        "highlights": [
+          "Covered parking",
+          "Rooftop study deck",
+          "Monthly housekeeping",
+          "Gym access"
+        ],
+        "pricing": [
+          {
+            "type": "Triple Sharing",
+            "price": 7000,
+            "meals": "2 meals"
+          },
+          {
+            "type": "Double Sharing",
+            "price": 8200,
+            "meals": "2 meals"
+          },
+          {
+            "type": "AC Single",
+            "price": 12000,
+            "meals": "2 meals"
+          }
+        ],
+        "lat": 26.8544,
+        "lng": 75.8136,
+        "phone": "+919000000002",
+        "whatsapp": "+919000000002",
+        "images": [
+          "/api/uploads/demo-own-demo-1-0.png",
+          "/api/uploads/demo-own-demo-1-1.png",
+          "/api/uploads/demo-own-demo-1-2.png",
+          "/api/uploads/demo-own-demo-1-3.png",
+          "/api/uploads/demo-own-demo-1-4.png"
+        ],
+        "videos": [],
+        "mapsUrl": "",
+        "createdAt": "2026-09-29T10:00:00.000Z",
+        "updatedAt": "2026-09-29T10:00:00.000Z"
+      }
+    ],
+    "createdAt": "2026-09-29T10:00:00.000Z",
+    "updatedAt": "2026-09-29T10:00:00.000Z"
+  },
+  {
+    "id": "own-demo-2",
+    "name": "Green Nest Girls PG",
+    "email": "girls@pgowner.test",
+    "passwordHash": "be9071ef8a99d54b915123b05f9b268b:de1770819a6d0b0eb7c84d5d94a547582d91ba12d54b4dbb3cc59500770fac7bcf45829131f3fc3615aa5d9cadf4aa8bfa29864f6ee9580816f0a7262622cf0d",
+    "slug": "green-nest-girls-pg",
+    "phone": "+919000000003",
+    "whatsapp": "+919000000003",
+    "tagline": "Girls-only PG in Indore with a full-time warden and home food",
+    "about": "Green Nest Girls PG is a demo listing. Safe gated campus in Vijay Nagar with 24x7 warden, biometric entry, three meals a day and laundry included.",
+    "city": "Indore",
+    "address": "78, Vijay Nagar, Indore, Madhya Pradesh 452010",
+    "brandName": "Green Nest",
+    "brandColor": "#059669",
+    "logo": "/api/uploads/demo-own-demo-2-logo.png",
+    "carousel": [
+      "/api/uploads/demo-own-demo-2-0.png",
+      "/api/uploads/demo-own-demo-2-1.png",
+      "/api/uploads/demo-own-demo-2-2.png",
+      "/api/uploads/demo-own-demo-2-3.png",
+      "/api/uploads/demo-own-demo-2-4.png",
+      "/api/uploads/demo-own-demo-2-5.png"
+    ],
+    "branches": [
+      {
+        "id": "br-demo-3",
+        "name": "Green Nest Girls PG — Vijay Nagar",
+        "gender": "female",
+        "city": "Indore",
+        "locality": "Vijay Nagar",
+        "address": "78, Vijay Nagar, Indore, Madhya Pradesh 452010",
+        "description": "Demo branch. Gated girls-only campus with warden on site, biometric entry and separate study and dining halls.",
+        "amenities": [
+          "WiFi",
+          "Food (3 meals)",
+          "Warden",
+          "Biometric Entry",
+          "Laundry",
+          "Hot Water",
+          "CCTV",
+          "Power Backup"
+        ],
+        "highlights": [
+          "24x7 female warden",
+          "Biometric entry",
+          "Separate study hall",
+          "Home-style meals"
+        ],
+        "pricing": [
+          {
+            "type": "Triple Sharing",
+            "price": 7800,
+            "meals": "3 meals"
+          },
+          {
+            "type": "Double Sharing",
+            "price": 9000,
+            "meals": "3 meals"
+          },
+          {
+            "type": "AC Double Sharing",
+            "price": 11000,
+            "meals": "3 meals"
+          }
+        ],
+        "lat": 22.7533,
+        "lng": 75.8937,
+        "phone": "+919000000003",
+        "whatsapp": "+919000000003",
+        "images": [
+          "/api/uploads/demo-own-demo-2-0.png",
+          "/api/uploads/demo-own-demo-2-1.png",
+          "/api/uploads/demo-own-demo-2-2.png",
+          "/api/uploads/demo-own-demo-2-3.png"
+        ],
+        "videos": [],
+        "mapsUrl": "",
+        "createdAt": "2026-09-29T10:00:00.000Z",
+        "updatedAt": "2026-09-29T10:00:00.000Z"
+      },
+      {
+        "id": "br-demo-4",
+        "name": "Green Nest Girls PG — Rau",
+        "gender": "female",
+        "city": "Indore",
+        "locality": "Rau",
+        "address": "9, Rau Industrial Area Road, Indore, Madhya Pradesh 452010",
+        "description": "Demo branch. Small 24-bed facility close to the Rau industrial belt, popular with working women.",
+        "amenities": [
+          "WiFi",
+          "Food (3 meals)",
+          "Warden",
+          "CCTV",
+          "Laundry",
+          "Power Backup"
+        ],
+        "highlights": [
+          "24 beds only",
+          "Close to Rau MIDC",
+          "In-house laundry",
+          "Family visiting hours"
+        ],
+        "pricing": [
+          {
+            "type": "Triple Sharing",
+            "price": 6800,
+            "meals": "3 meals"
+          },
+          {
+            "type": "Double Sharing",
+            "price": 8200,
+            "meals": "3 meals"
+          }
+        ],
+        "lat": 22.6522,
+        "lng": 75.8121,
+        "phone": "+919000000004",
+        "whatsapp": "+919000000004",
+        "images": [
+          "/api/uploads/demo-own-demo-2-0.png",
+          "/api/uploads/demo-own-demo-2-1.png",
+          "/api/uploads/demo-own-demo-2-2.png",
+          "/api/uploads/demo-own-demo-2-3.png",
+          "/api/uploads/demo-own-demo-2-4.png"
+        ],
+        "videos": [],
+        "mapsUrl": "",
+        "createdAt": "2026-09-29T10:00:00.000Z",
+        "updatedAt": "2026-09-29T10:00:00.000Z"
+      }
+    ],
+    "createdAt": "2026-09-29T10:00:00.000Z",
+    "updatedAt": "2026-09-29T10:00:00.000Z"
+  },
+  {
+    "id": "own-demo-3",
+    "name": "Scholars Co-ed Stay",
+    "email": "kota@pgowner.test",
+    "passwordHash": "388b4b1977fd18f6492e137144eeec8d:79921c8d95bf046c785ce27462f2d169a795bc57da74c0fecbdcaa3ae4752756ee1984fb9fbc2f1a378b9629c6188608be1896e2219e1de9bd112d9fc5c40ba5",
+    "slug": "scholars-co-ed-stay",
+    "phone": "+919000000005",
+    "whatsapp": "+919000000005",
+    "tagline": "Co-ed PG in Kota built for IIT/NEET aspirants",
+    "about": "Scholars Co-ed Stay is a demo listing. Ten minutes from coaching hubs, with a strict study schedule, doubt-solving room and monthly parent reporting.",
+    "city": "Kota",
+    "address": "31, Talwandi, Kota, Rajasthan 325002",
+    "brandName": "Scholars",
+    "brandColor": "#2563eb",
+    "logo": "/api/uploads/demo-own-demo-3-logo.png",
+    "carousel": [
+      "/api/uploads/demo-own-demo-3-0.png",
+      "/api/uploads/demo-own-demo-3-1.png",
+      "/api/uploads/demo-own-demo-3-2.png",
+      "/api/uploads/demo-own-demo-3-3.png",
+      "/api/uploads/demo-own-demo-3-4.png",
+      "/api/uploads/demo-own-demo-3-5.png"
+    ],
+    "branches": [
+      {
+        "id": "br-demo-5",
+        "name": "Scholars Co-ed Stay — Talwandi",
+        "gender": "unisex",
+        "city": "Kota",
+        "locality": "Talwandi",
+        "address": "31, Talwandi, Kota, Rajasthan 325002",
+        "description": "Demo branch. Fixed study hours, dedicated doubt-solving room, and separate floors for boys and girls.",
+        "amenities": [
+          "WiFi",
+          "Food (3 meals)",
+          "Study Room",
           "Laundry",
           "Power Backup",
           "CCTV",
@@ -48,69 +323,46 @@
           "Housekeeping"
         ],
         "highlights": [
-          "Boys-only hostel",
-          "3 home-style meals daily",
-          "AC & non-AC rooms",
-          "High-speed WiFi",
-          "Power backup 24/7",
-          "CCTV security"
+          "Fixed study schedule",
+          "Doubt-solving room",
+          "Separate floors",
+          "Monthly parent report",
+          "Mess on rent"
         ],
         "pricing": [
           {
             "type": "Triple Sharing",
-            "price": 8000,
+            "price": 7200,
             "meals": "3 meals"
           },
           {
             "type": "Double Sharing",
-            "price": 8500,
-            "meals": "3 meals"
-          },
-          {
-            "type": "Single",
-            "price": 10000,
+            "price": 8600,
             "meals": "3 meals"
           },
           {
             "type": "AC Double Sharing",
             "price": 10500,
             "meals": "3 meals"
-          },
-          {
-            "type": "AC Single",
-            "price": 11000,
-            "meals": "3 meals"
           }
         ],
+        "lat": 25.2138,
+        "lng": 75.8648,
+        "phone": "+919000000005",
+        "whatsapp": "+919000000005",
         "images": [
-          "/api/uploads/ex-army-1.jpg",
-          "/api/uploads/demo-1.jpeg",
-          "/api/uploads/demo-2.jpeg",
-          "/api/uploads/demo-3.jpeg",
-          "/api/uploads/demo-4.jpeg",
-          "/api/uploads/demo-5.jpeg",
-          "/api/uploads/demo-6.jpeg",
-          "/api/uploads/demo-7.jpeg",
-          "/api/uploads/demo-8.jpeg",
-          "/api/uploads/demo-9.jpeg",
-          "/api/uploads/demo-10.jpeg",
-          "/api/uploads/demo-11.jpeg",
-          "/api/uploads/demo-12.jpeg"
+          "/api/uploads/demo-own-demo-3-0.png",
+          "/api/uploads/demo-own-demo-3-1.png",
+          "/api/uploads/demo-own-demo-3-2.png",
+          "/api/uploads/demo-own-demo-3-3.png"
         ],
-        "videos": [
-          "/api/uploads/ex-army-1.mp4"
-        ],
-        "lat": 27.627622,
-        "lng": 75.174555,
-        "mapsUrl": "https://maps.app.goo.gl/33WyqNj1MMy219JA6",
-        "createdAt": "2026-09-20T10:00:00.000Z",
-        "updatedAt": "2026-09-25T12:00:00.000Z",
-        "whatsapp": "+918725959828",
-        "phone": "+918725959828"
+        "videos": [],
+        "mapsUrl": "",
+        "createdAt": "2026-09-29T10:00:00.000Z",
+        "updatedAt": "2026-09-29T10:00:00.000Z"
       }
     ],
-    "createdAt": "2026-09-20T10:00:00.000Z",
-    "updatedAt": "2026-09-29T17:11:03.325Z",
-    "logo": "/api/uploads/1790545983089-knig5488.jpg"
+    "createdAt": "2026-09-29T10:00:00.000Z",
+    "updatedAt": "2026-09-29T10:00:00.000Z"
   }
 ]

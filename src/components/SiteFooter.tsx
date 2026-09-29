@@ -6,7 +6,7 @@ export default async function SiteFooter() {
   const h = await headers();
   const pathname = h.get("x-pg-pathname") || "";
   const match = pathname.match(/^\/o\/([^/]+)/);
-  const owner = (match ? getOwnerBySlug(match[1]) : undefined) || getOwners()[0];
+  const owner = (match ? await getOwnerBySlug(match[1]) : undefined) || (await getOwners())[0];
   const firstBranch = owner?.branches?.[0];
   const mapsLink =
     firstBranch && typeof firstBranch.lat === "number" && typeof firstBranch.lng === "number"

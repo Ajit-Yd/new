@@ -13,8 +13,10 @@ import OwnerBranchCard from "@/components/OwnerBranchCard";
 import ShareButton from "@/components/ShareButton";
 import { formatINR, whatsappLink } from "@/lib/directions";
 
-export default function HomePage() {
-  const owners = getOwners();
+export const dynamic = "force-dynamic";
+
+export default async function HomePage() {
+  const owners = await getOwners();
   const owner = owners[0];
 
   const photos: PublishedPhoto[] = owners.flatMap((owner2) =>

@@ -2,7 +2,7 @@ import { NextResponse } from "next/server";
 import { getOwners } from "@/lib/store";
 
 export async function GET() {
-  const owners = getOwners();
+  const owners = await getOwners();
   const owner = owners[0];
   if (!owner) return NextResponse.json({ error: "No site yet." }, { status: 404 });
   return NextResponse.json({
